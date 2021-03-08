@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All of Joonm</title>
+    <style>
+        #MainHeading{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 5rem;
+        }
+        #menu{
+            list-style-type: none;
+            margin:0;
+            margin-top:1rem;
+            padding:0;
+            background-color:darkgrey;
+        }
+        #menu:after{
+            content:'';
+            display:block;
+            clear:both;
+            /* 블럭 안에 float로 배열된 li들 들어오도록 clear:both 씀 */
+        }
+        .home{
+            background-color: grey;
+            float:left;
+        }
+        .left{
+            float:left;
+        }
+        .right{
+            float:right;
+        }
+        li a {
+            display:block;
+            color:white;
+            text-align: center;
+            padding: 14px 20px;
+            /* padding: 위아래 좌우 */
+            text-decoration:none;
+            /* text-decoration: 하이퍼링크 표시 지움 */
+        }
+        li a:hover:not(.active){
+            background-color: black;
+        }
+        #mainFeed{
+            float:left;
+            background-color: whitesmoke;
+            padding:30px 20px;
+            margin-top:5px;
+            width:42%;
+            height:70vh;
+        }
+        #subFeed>ul>*{
+            float:right;
+            background-color: whitesmoke;
+            padding:30px 20px;
+            margin-top:5px;
+            width:51%;
+            min-height:100%;
+            height:8.8vh;
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="MainHeading">All of Joonm</div>
+    <ul id="menu">
+        <li><a class='home' href="main.html">Home</a></li>
+        <li><a class="left">Left-1</a></li>
+        <li><a class="left">Left-2</a></li>
+        <li><a class="right">Right-1</a></li>
+        <li><a class="right">Right-2</a></li>
+    </ul>
+    <div id="feed">
+        <div id="mainFeed">
+            무~야호!!<br>
+            그만큼 재미있단 거지<br><br>
+            여기는 아무래도 left menu로 만들어야할 듯싶다.
+        </div>
+        <div id="subFeed">
+            <ul>
+                <li>1. 사진이나 올려보자</li>
+                <li>2. 코딩 공부한 것도 올려보자</li>
+                <li>3. 글쓰기 기능을 만들어보자<br>
+                    - 로그인 기능<br>
+                    - 각종 자료 첨부 기능<br>
+                    - 데이터베이스 관리 기능<br>
+                </li>
+                <li>4. 포기하지 말고 제대로 해보자.</li>
+                <li style='color:red; font-weight:bold;'>5. 나 나름대로 1일 1커밋 !!!</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
