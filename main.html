@@ -1,103 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All of Joonm</title>
+    <title>Document</title>
     <style>
-        #MainHeading{
-            font-family:'Times New Roman', Times, serif;
-            font-size: 5rem;
+        .content{
+            display:flex;
+            flex-direction: column;
         }
-        #menu{
+        .main_menu{
             list-style-type: none;
-            margin:0;
-            margin-top:1rem;
+            display:flex;
             padding:0;
-            background-color:darkgrey;
         }
-        #menu:after{
-            content:'';
-            display:block;
-            clear:both;
-            /* 블럭 안에 float로 배열된 li들 들어오도록 clear:both 씀 */
-        }
-        .home{
-            background-color: grey;
-            float:left;
-        }
-        .left{
-            float:left;
-        }
-        .right{
-            float:right;
-        }
-        li a {
-            display:block;
-            color:white;
+        .main_menu li{
+            flex-basis:100px;
+            flex-grow:1;
             text-align: center;
-            padding: 14px 20px;
-            /* padding: 위아래 좌우 */
-            text-decoration:none;
-            /* text-decoration: 하이퍼링크 표시 지움 */
+            background-color: powderblue;
         }
-        li a:hover:not(.active){
+        .main_menu li:hover:not(.active), footer>a:hover{
+            text-decoration: none;
             background-color: black;
+            color:white;
+            font-weight: bold;
+            
         }
-        #mainFeed{
-            float:left;
-            background-color: whitesmoke;
-            padding:30px 20px;
-            margin-top:5px;
-            width:42%;
-            height:70vh;
+        .bodies{
+            display: flex;
         }
-        #subFeed>ul>*{
-            float:right;
-            background-color: whitesmoke;
-            padding:30px 20px;
-            margin-top:5px;
-            width:51%;
-            min-height:100%;
-            height:8.8vh;
-            list-style-type: none;
+        .directory{
+            border-right:3px solid white;
+            background-color: powderblue;
         }
-
+        .cols{
+            background-color: powderblue;
+        }
+        .homelink{
+            text-align: center;
+            border-top:3px solid white;
+            background-color: powderblue;
+        }
+        .bodies>div{
+            flex-basis:13rem;
+        }
+        .cols{
+            flex-grow:1;
+            padding:1rem;
+        }
+        a:link,a:visited{
+            text-decoration: none;
+            color:black;
+        }
+        footer>a{
+            display:block;
+        }
     </style>
 </head>
-
 <body>
-    <div id="MainHeading">All of Joonm</div>
-    <ul id="menu">
-        <li><a class='home' href="main.html">Home</a></li>
-        <li><a class="left">Left-1</a></li>
-        <li><a class="left">Left-2</a></li>
-        <li><a class="right">Right-1</a></li>
-        <li><a class="right">Right-2</a></li>
-    </ul>
-    <div id="feed">
-        <div id="mainFeed">
-            무~야호!!<br>
-            그만큼 재미있단 거지<br><br>
-            여기는 아무래도 left menu로 만들어야할 듯싶다.<br>
-            그리고 모바일로 보니 엄청엄청 깨진다..
-        </div>
-        <div id="subFeed">
-            <ul>
-                <li>1. 사진이나 올려보자</li>
-                <li>2. 코딩 공부한 것도 올려보자</li>
-                <li>3. 글쓰기 기능을 만들어보자<br>
-                    - 로그인 기능<br>
-                    - 각종 자료 첨부 기능<br>
-                    - 데이터베이스 관리 기능<br>
-                </li>
-                <li>4. 포기하지 말고 제대로 해보자.</li>
-                <li style='color:red; font-weight:bold;'>5. 1일 1커밋 !!!</li>
-            </ul>
-        </div>
+    <div class="content">
+        <header>
+            <h1 style="text-align: center;">All of Joonm</h1>
+            <nav class="menu_wrapper">
+                <ul class="main_menu">
+                    <li>Home</li>
+                    <li>Study</li>
+                    <li>Hobby</li>
+                    <li>Comment</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+        </header>
+        <section class="bodies">
+            <div class="directory">
+                <nav class="directory_nav">
+                    <ul>
+                        <li>메뉴 1</li>
+                        <ul>
+                            <li>1-1</li>
+                            <li>1-2</li>
+                            <li>1-3</li>
+                        </ul>
+                        <li>메뉴 2</li>
+                        <li>메뉴 3</li>
+                        <ul>
+                            <li>2-1</li>
+                            <li>2-2</li>
+                        </ul>
+                        <li>메뉴 4</li>
+                        <li>메뉴 5</li>
+                    </ul>    
+                </nav>
+            </div>
+            <div class="cols">
+                <div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, debitis ducimus? Repellat tempora, omnis dolore assumenda quis dignissimos est ut quas, officiis similique delectus, aliquam nemo temporibus quo. Dolor consequuntur in, nesciunt unde necessitatibus placeat reiciendis consectetur nam, nemo obcaecati quae. Magnam minus sit iusto iste unde animi harum illum sint, autem odit vitae esse nam hic dolorum. Necessitatibus fugit, sint amet perspiciatis ipsum laborum minima odit repudiandae nisi, minus quasi pariatur iusto maiores reprehenderit dolore culpa expedita animi ratione. Veritatis, asperiores dolor reiciendis quod necessitatibus assumenda tempore, sit quas excepturi reprehenderit perferendis minus labore minima amet autem eum inventore?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut sed odio tempora est sunt mollitia harum placeat unde dolorum esse, cupiditate quam error quasi, veritatis aliquid nobis quae rerum voluptatum?00
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint omnis saepe similique dolorum eligendi, blanditiis aliquid quisquam rem in. Non aliquid cumque eius adipisci neque? Tempore quasi ipsum reiciendis est.
+                    Ipsum in quos aliquam animi cumque eaque ipsa, facere possimus provident inventore ut officiis. Ad enim culpa totam, est nesciunt nulla id unde repudiandae? Vero tenetur iusto aut libero tempore?<br>
+                    Provident mollitia fugiat distinctio quo eum maiores voluptate possimus placeat reprehenderit ullam sed ipsa ut unde illo perspiciatis, asperiores ipsum dolore ab dolorum voluptatibus consequuntur quas, praesentium, labore nam? Ipsam?
+                    Minus, quasi! Vel numquam, quas qui doloribus asperiores hic tempora excepturi blanditiis ut commodi. Recusandae velit unde laudantium officia nihil voluptates, est debitis ipsum veniam necessitatibus labore itaque reprehenderit consequuntur.
+                    Natus inventore consequatur asperiores, praesentium accusamus sunt enim excepturi sed fugit accusantium ducimus eveniet atque ut omnis nobis assumenda cum veritatis pariatur? Harum ex similique ratione fuga. Nesciunt, eaque delectus.
+                    Quod maiores nihil laborum quas quisquam sunt provident et! Minus numquam quaerat aliquid, odio eum provident maiores illum quas iusto fuga ipsum adipisci, cumque rerum sunt? Quam fuga recusandae tempora?<br>
+                    Fugiat architecto fugit earum provident tempora minus explicabo officia quae dolores cumque quod dolor, est eos odit sint reprehenderit eligendi dicta, quo similique aperiam eius. Amet maiores magni saepe in?
+                    Aliquam esse asperiores, ratione blanditiis maiores excepturi, voluptate alias earum, deserunt ea sapiente dolores porro possimus odit? Accusantium voluptates iusto vitae, eius debitis aperiam, possimus recusandae sapiente, dolores asperiores vel.
+                    Commodi cum rerum dignissimos perspiciatis expedita, mollitia illum qui quod hic quasi velit consectetur, deleniti aliquam ab error fuga repellendus doloribus, temporibus provident placeat quos. Officiis exercitationem error dolorum nobis?
+                    Inventore architecto aut obcaecati quae corporis rerum totam beatae voluptatum ipsum autem ratione nemo suscipit perspiciatis sit illo explicabo laudantium ducimus, dolores fugit at animi eius laboriosam officiis assumenda. Alias.
+                </div>
+            </div>
+        </section>
+        <footer class='homelink'>
+            <a href="main.html">
+                홈페이지
+            </a>
+        </footer>
     </div>
 </body>
-
 </html>
