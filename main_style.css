@@ -1,5 +1,5 @@
 *{
-    font-family:'mapo한아름', sans-serif;
+    font-family: 'Raleway' sans-serif;
 }
 .fixed_header{
     position:fixed;
@@ -17,7 +17,7 @@
 }
 .fixed_menu>h1{
     min-width: fit-content;
-    font-size:30px;
+    font-size:24px;
     padding-left:60px;
     padding-right:20px;
 }
@@ -33,11 +33,11 @@
     flex-grow:1;
 }
 .fixed_nav a{
-    flex-basis:120px;
+    flex-basis:90px;
     flex-grow:0;
     padding:10px;
     text-align: center;
-    font-size:20px;
+    font-size:18px;
 }
 .fixed_nav a:hover{
     font-weight: bold;
