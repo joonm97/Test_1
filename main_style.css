@@ -68,7 +68,7 @@ a:link,a:visited{
 
 /* CONTENT BOX */
 .content_wrapper{
-    padding-top:70px;
+    padding-top:56px;
     width:100%;
     text-align:center;
 }
@@ -81,6 +81,7 @@ a:link,a:visited{
     width:1000px;
     min-width: 1000px;
     position:relative;
+    box-shadow:0px 0px 50px gainsboro;
 }
 
 .bodies{
@@ -89,12 +90,18 @@ a:link,a:visited{
 }
 .directory{
     display:flex;
-    border-right:1px solid grey;
+    border-right:2px solid grey;
     border-bottom:1px solid grey;
     margin-right:-1px;
     flex-grow:0;
     min-width: fit-content;
-    padding-right:50px;
+    flex-direction: column;
+}
+.directory_now{
+    background-color:gainsboro;
+    text-align: center;
+    font-size:26px;
+    padding:20px 60px;
 }
 .directory li:hover{
     text-decoration: underline;
@@ -103,14 +110,15 @@ a:link,a:visited{
 .cols{
     flex-grow:1;
     padding:30px;
-    padding-top:30px;
+    padding-top:40px;
 
     border-left:1px solid grey;
     border-bottom:1px solid grey;
 }
 .heading{
     /* background-color: powderblue; */
-    border-bottom:2px solid grey;
+    padding-bottom: 10px;
+    border-bottom:1px solid grey;
     text-align: center;
 }
 .heading>h1{
@@ -129,7 +137,5 @@ footer{
     flex-basis:auto;
     font-size: 13px;
     color:grey;
-}
-footer p{
-    margin:5;
+    margin-bottom: 20px;
 }
